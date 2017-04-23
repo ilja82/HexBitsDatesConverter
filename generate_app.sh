@@ -2,29 +2,37 @@
 
 # Checkout 'generated' branch:
 cd ..
-rm -rf HexBitsDatesConverter_tmp
-mkdir HexBitsDatesConverter_tmp
-cd HexBitsDatesConverter_tmp
+rm -rf HexBitsDatesConverter_tmp && mkdir HexBitsDatesConverter_tmp && cd HexBitsDatesConverter_tmp
 git clone https://github.com/ilja82/HexBitsDatesConverter.git
 cd HexBitsDatesConverter
 git checkout generated
-rm -rf *
-cd ..
 
-# Re-install latest angular-cli:
-npm uninstall -g @angular/cli
-npm cache clean
-npm install -g @angular/cli@latest
+# Delete previous code:
+rm -rf *
+rm .angular-cli.json .editorconfig .gitignore
+
+ls -lah .
+read -n1 -r -p "Check if only .git folder is shown! Then press any key to continue..." key
+
+# Upgrade angular-cli:
+yarn global upgrade @angular/cli
+#yarn global remove @angular/cli
+#yarn global cache clean
+#yarn global add @angular/cli
 
 #Build app:
-ng new HexBitsDatesConverter
+cd ..
+ng set --global packageManager=yarn
+ng new HexBitsDatesConverter --routing --style=sass
 cd HexBitsDatesConverter
 
-# Commit all to GitHub
-git add -A
-git commit -m "automatically generated"
-git push
+rm README.md
+
+ls -lah .
+read -n1 -r -p "Check if all project files are shown. Then press any key to continue..." key
+
+# Commit & push all changes to GitHub
+git add -A && git commit -m "automatically generated" && git push
 
 # Remove temporary files:
-cd ../..
-rm -rf HexBitsDatesConverter_tmp
+cd ../.. && rm -rf HexBitsDatesConverter_tmp
