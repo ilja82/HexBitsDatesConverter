@@ -25,6 +25,8 @@ cd ..
 ng set --global packageManager=yarn
 ng new HexBitsDatesConverter --routing --style=sass
 cd HexBitsDatesConverter
+ng generate pipe BitsToHex
+ng generate service NumberUtils
 
 rm README.md
 

@@ -1,11 +1,12 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BitsToHexPipe } from './bits-to-hex.pipe';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {BitsToHexPipe} from './bits-to-hex.pipe';
+import {NumberUtilsService} from 'app/number-utils.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { BitsToHexPipe } from './bits-to-hex.pipe';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [NumberUtilsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
