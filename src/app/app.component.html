@@ -2,6 +2,9 @@
   <input #box [value]="bits" (keyup)="updateBits(box.value)">
   <br>
   <input #box2 [value]="bits | bitsToHex" (keyup)="updateHex(box2.value)">
-  {{bits}} --- {{bits|bitsToHex}}
+  <br>
+  Bits: {{bits}}
+  <br>
+  Hex: {{bits | bitsToHex}}
 </h1>
 <router-outlet></router-outlet>

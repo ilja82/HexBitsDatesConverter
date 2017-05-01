@@ -16,7 +16,9 @@ export class NumberUtilsService {
   hexToBits(hex: string): string {
     let result = '';
     for (const part of hex) {
-      result += parseInt(part, 16).toString(2);
+      let bits = parseInt(part, 16).toString(2);
+      bits = this.expandBitsLeft(bits);
+      result += bits;
     }
 
     return result;
@@ -26,11 +28,20 @@ export class NumberUtilsService {
     const parts = value.match(/[\s\S]{1,4}/g) || [];
 
     let result = '';
-    for (const part of parts) {
+    for (let part of parts) {
+      part = this.expandBitsRight(part);
       result += parseInt(part, 2).toString(16);
     }
 
     return result;
+  }
+
+  expandBitsRight(bits) {
+    return (bits + '000').substr(0, 4);
+  }
+
+  expandBitsLeft(bits) {
+    return ('000' + bits).substr(-4);
   }
 
 }
