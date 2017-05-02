@@ -28,6 +28,10 @@ cd HexBitsDatesConverter
 ng generate pipe BitsToHex
 ng generate service NumberUtils
 
+yarn add @angular/material
+yarn add @angular/animations
+yarn add hammerjs
+
 rm README.md
 
 ls -lah .

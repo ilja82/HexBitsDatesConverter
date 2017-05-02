@@ -8,6 +8,9 @@ import {AppComponent} from './app.component';
 import {BitsToHexPipe} from './bits-to-hex.pipe';
 import {NumberUtilsService} from 'app/number-utils.service';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MdCardModule, MdInputModule} from '@angular/material';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +20,10 @@ import {NumberUtilsService} from 'app/number-utils.service';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MdInputModule,
+    MdCardModule
   ],
   providers: [NumberUtilsService],
   bootstrap: [AppComponent]

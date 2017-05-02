@@ -8,7 +8,7 @@ import {NumberUtilsService} from './number-utils.service';
 })
 @Injectable()
 export class AppComponent {
-  bits = '0111';
+  bits = '';
 
   constructor(private numberUtils: NumberUtilsService) {
   }
