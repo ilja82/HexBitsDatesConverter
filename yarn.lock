@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@angular/animations@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-4.1.0.tgz#97b642aee01b5406e03ec65e499342ba91e2dd38"
+
 "@angular/cli@1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-1.0.1.tgz#95bc1e02c564ff2bddc7c6d975fdf355b47216cb"
@@ -93,6 +97,10 @@
 "@angular/http@^4.0.0":
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/@angular/http/-/http-4.1.0.tgz#7ba0c4d044dee964021b7cf19cb146a2c31577a5"
+
+"@angular/material@^2.0.0-beta.3":
+  version "2.0.0-beta.3"
+  resolved "https://registry.yarnpkg.com/@angular/material/-/material-2.0.0-beta.3.tgz#ec31dee61d7300ece28fee476852db236ded1e13"
 
 "@angular/platform-browser-dynamic@^4.0.0":
   version "4.1.0"
@@ -1416,8 +1424,8 @@ ee-first@1.1.1:
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
 
 electron-to-chromium@^1.2.7:
-  version "1.3.8"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.8.tgz#b2c8a2c79bb89fbbfd3724d9555e15095b5f5fb6"
+  version "1.3.9"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.9.tgz#db1cba2a26aebcca2f7f5b8b034554468609157d"
 
 elliptic@^6.0.0:
   version "6.4.0"
@@ -1971,6 +1979,10 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
 
+hammerjs@^2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/hammerjs/-/hammerjs-2.0.8.tgz#04ef77862cff2bb79d30f7692095930222bf60f1"
+
 handle-thing@^1.2.4:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/handle-thing/-/handle-thing-1.2.5.tgz#fd7aad726bf1a5fd16dfc29b2f7a6601d27139c4"
@@ -1984,8 +1996,8 @@ handlebars@^1.3.0:
     uglify-js "~2.3"
 
 handlebars@^4.0.3:
-  version "4.0.7"
-  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.0.7.tgz#e97325aeb8ea0b9e12b9c4dd73c4c312ad0ede59"
+  version "4.0.8"
+  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.0.8.tgz#22b875cd3f0e6cbea30314f144e82bc7a72ff420"
   dependencies:
     async "^1.4.0"
     optimist "^0.6.1"
@@ -3077,8 +3089,8 @@ no-case@^2.2.0:
     lower-case "^1.1.1"
 
 node-gyp@^3.3.1:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/node-gyp/-/node-gyp-3.6.0.tgz#7474f63a3a0501161dda0b6341f022f14c423fa6"
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/node-gyp/-/node-gyp-3.6.1.tgz#19561067ff185464aded478212681f47fd578cbc"
   dependencies:
     fstream "^1.0.0"
     glob "^7.0.3"
@@ -4002,8 +4014,8 @@ regexpu-core@^1.0.0:
     regjsparser "^0.1.4"
 
 registry-auth-token@^3.0.1:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/registry-auth-token/-/registry-auth-token-3.3.0.tgz#57ae67347e73d96345ed1bc01294c7237c02aa63"
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/registry-auth-token/-/registry-auth-token-3.3.1.tgz#fb0d3289ee0d9ada2cbb52af5dfe66cb070d3006"
   dependencies:
     rc "^1.1.6"
     safe-buffer "^5.0.1"
@@ -4151,8 +4163,8 @@ rx@^4.1.0:
   resolved "https://registry.yarnpkg.com/rx/-/rx-4.1.0.tgz#a5f13ff79ef3b740fe30aa803fb09f98805d4782"
 
 rxjs@^5.0.1, rxjs@^5.1.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.3.0.tgz#d88ccbdd46af290cbdb97d5d8055e52453fabe2d"
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.3.1.tgz#9ecc9e722247e4f4490d30a878577a3740fd0cb7"
   dependencies:
     symbol-observable "^1.0.1"
 
@@ -4336,8 +4348,8 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
 
 silent-error@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/silent-error/-/silent-error-1.0.1.tgz#71b7d503d1c6f94882b51b56be879b113cb4822c"
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/silent-error/-/silent-error-1.1.0.tgz#2209706f1c850a9f1d10d0d840918b46f26e1bc9"
   dependencies:
     debug "^2.2.0"
 
