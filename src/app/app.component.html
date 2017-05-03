@@ -1,18 +1,18 @@
 <md-card>
   <md-card-content>
     <md-input-container class="full-width">
-      <input mdInput placeholder="bit sequence" #box [value]="bits" (keyup)="updateBits(box.value)">
-      <md-hint align="end">{{box.value.length}} bits</md-hint>
+      <input mdInput placeholder="bit sequence" #bitsBox [value]="bits" (keyup)="updateBits(bitsBox.value)">
+      <md-hint align="end">{{bitsBox.value.length}} bits</md-hint>
     </md-input-container>
     <md-input-container class="full-width">
-      <input mdInput placeholder="hex sequence" #box2 [value]="bits | bitsToHex" (keyup)="updateHex(box2.value)">
+      <input mdInput placeholder="hex sequence" #hexBox [value]="bits | bitsToHex" (keyup)="updateHex(hexBox.value)">
     </md-input-container>
   </md-card-content>
 </md-card>
 <md-card>
   <md-card-content>
     <md-input-container>
-      <input mdInput placeholder="start date" type="date">
+      <input mdInput placeholder="start date" type="date" [(value)]="startDate">
     </md-input-container>
   </md-card-content>
 </md-card>

@@ -9,6 +9,7 @@ import {NumberUtilsService} from './number-utils.service';
 @Injectable()
 export class AppComponent {
   bits = '';
+  startDate = new Date();
 
   constructor(private numberUtils: NumberUtilsService) {
   }
