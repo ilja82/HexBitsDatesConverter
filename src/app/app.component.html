@@ -12,7 +12,8 @@
 <md-card>
   <md-card-content>
     <md-input-container>
-      <input mdInput placeholder="start date" type="date" [(value)]="startDate">
+      <input mdInput placeholder="start date" type="date" #dateBox name="startDate"
+             [value]="startDate | date:'yyyy-MM-dd'">
     </md-input-container>
   </md-card-content>
 </md-card>
