@@ -17,7 +17,7 @@ read -n1 -r -p "Check if only .git folder is shown! Then press any key to contin
 # Upgrade angular-cli:
 yarn global upgrade @angular/cli
 #yarn global remove @angular/cli
-#yarn global cache clean
+#yarn cache clean
 #yarn global add @angular/cli
 
 #Build app:
@@ -25,12 +25,15 @@ cd ..
 ng set --global packageManager=yarn
 ng new HexBitsDatesConverter --routing --style=sass
 cd HexBitsDatesConverter
-ng generate pipe BitsToHex
-ng generate service NumberUtils
 
 yarn add @angular/material
 yarn add @angular/animations
 yarn add hammerjs
+yarn add angular-calendar
+
+ng generate pipe BitsToHex
+ng generate service NumberUtils
+
 
 rm README.md
 

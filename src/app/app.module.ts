@@ -10,6 +10,7 @@ import {NumberUtilsService} from 'app/number-utils.service';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MdCardModule, MdInputModule} from '@angular/material';
+import {CalendarModule} from 'angular-calendar';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {MdCardModule, MdInputModule} from '@angular/material';
     AppRoutingModule,
     BrowserAnimationsModule,
     MdInputModule,
-    MdCardModule
+    MdCardModule,
+    CalendarModule.forRoot()
   ],
   providers: [NumberUtilsService],
   bootstrap: [AppComponent]

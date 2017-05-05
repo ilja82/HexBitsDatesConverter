@@ -15,7 +15,12 @@
       <input mdInput placeholder="start date" type="date" #dateBox name="startDate"
              [value]="startDate | date:'yyyy-MM-dd'">
     </md-input-container>
+    <mwl-calendar-month-view
+      [viewDate]="startDate"
+      [events]="events"
+      [refresh]="refresh"
+      [dayModifier]="addCssClass">
+    </mwl-calendar-month-view>
   </md-card-content>
 </md-card>
-
 <router-outlet></router-outlet>
