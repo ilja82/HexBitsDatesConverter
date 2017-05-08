@@ -2,6 +2,7 @@ import {Component, Injectable, ViewEncapsulation} from '@angular/core';
 import {NumberUtilsService} from './number-utils.service';
 import {CalendarEvent, CalendarMonthViewDay} from 'angular-calendar';
 import {Subject} from 'rxjs/Subject';
+import * as moment from 'moment/moment';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,11 @@ export class AppComponent {
 
   constructor(private numberUtils: NumberUtilsService) {
     this.addCssClass = (day: CalendarMonthViewDay): void => {
-      let dayDiff = (day.date.getTime() - this.startDate.getTime()) / 1000 / 60 / 60 / 24;
+      let time1 = day.date;
+      let time2 = this.startDate;
+      time1.setHours(0, 0, 0, 0);
+      time2.setHours(0, 0, 0, 0);
+      let dayDiff = moment(time1).diff(moment(time2), 'days');
       let char = this.bits.charAt(dayDiff);
       if (char === '1') {
         day.cssClass = 'active-cell';

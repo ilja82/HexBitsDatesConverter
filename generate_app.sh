@@ -15,10 +15,10 @@ ls -lah .
 read -n1 -r -p "Check if only .git folder is shown! Then press any key to continue..." key
 
 # Upgrade angular-cli:
-yarn global upgrade @angular/cli
-#yarn global remove @angular/cli
+#yarn global upgrade @angular/cli
+yarn global remove @angular/cli
 #yarn cache clean
-#yarn global add @angular/cli
+yarn global add @angular/cli
 
 #Build app:
 cd ..
@@ -30,6 +30,7 @@ yarn add @angular/material
 yarn add @angular/animations
 yarn add hammerjs
 yarn add angular-calendar
+yarn add moment
 
 ng generate pipe BitsToHex
 ng generate service NumberUtils
