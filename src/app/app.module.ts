@@ -9,7 +9,7 @@ import {BitsToHexPipe} from './bits-to-hex.pipe';
 import {NumberUtilsService} from 'app/number-utils.service';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MdCardModule, MdInputModule} from '@angular/material';
+import {MdCardModule, MdDatepickerModule, MdInputModule, MdNativeDateModule} from '@angular/material';
 import {CalendarModule} from 'angular-calendar';
 
 @NgModule({
@@ -25,6 +25,8 @@ import {CalendarModule} from 'angular-calendar';
     BrowserAnimationsModule,
     MdInputModule,
     MdCardModule,
+    MdDatepickerModule,
+    MdNativeDateModule,
     CalendarModule.forRoot()
   ],
   providers: [NumberUtilsService],

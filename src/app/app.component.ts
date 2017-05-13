@@ -20,12 +20,10 @@ export class AppComponent {
 
   constructor(private numberUtils: NumberUtilsService) {
     this.addCssClass = (day: CalendarMonthViewDay): void => {
-      let time1 = day.date;
-      let time2 = this.startDate;
-      time1.setHours(0, 0, 0, 0);
-      time2.setHours(0, 0, 0, 0);
-      let dayDiff = moment(time1).diff(moment(time2), 'days');
-      let char = this.bits.charAt(dayDiff);
+      const date1 = moment(day.date).startOf('day');
+      const date2 = moment(this.startDate).startOf('day');
+      const dayDiff = date1.diff(date2, 'days');
+      const char = this.bits.charAt(dayDiff);
       if (char === '1') {
         day.cssClass = 'active-cell';
       }
