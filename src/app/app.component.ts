@@ -15,11 +15,13 @@ export class AppComponent {
   bits = '';
   startDate = new Date();
   events: CalendarEvent[] = [];
-  addCssClass: (day: CalendarMonthViewDay) => void;
   refresh: Subject<any> = new Subject();
 
   constructor(private numberUtils: NumberUtilsService) {
-    this.addCssClass = (day: CalendarMonthViewDay): void => {
+  }
+
+  beforeMonthViewRender({body}: {body: CalendarMonthViewDay[]}): void {
+    body.forEach((day) => {
       const date1 = moment(day.date).startOf('day');
       const date2 = moment(this.startDate).startOf('day');
       const dayDiff = date1.diff(date2, 'days');
@@ -27,7 +29,7 @@ export class AppComponent {
       if (char === '1') {
         day.cssClass = 'active-cell';
       }
-    };
+    });
   }
 
   updateBits(bits: string) {

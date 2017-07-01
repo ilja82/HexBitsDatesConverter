@@ -20,8 +20,9 @@
       [viewDate]="startDate"
       [events]="events"
       [refresh]="refresh"
-      [dayModifier]="addCssClass">
+      (beforeViewRender)="beforeMonthViewRender($event)">
     </mwl-calendar-month-view>
   </md-card-content>
 </md-card>
+
 <router-outlet></router-outlet>
