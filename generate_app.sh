@@ -34,7 +34,7 @@ yarn add moment
 
 ng generate pipe BitsToHex
 ng generate service NumberUtils
-
+ng generate component Calendar
 
 rm README.md
 
